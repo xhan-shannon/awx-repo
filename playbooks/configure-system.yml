@@ -13,7 +13,7 @@
 
     - name: call roles
       roles:
-      - motd
+        - motd
      #  hosts: servers
      # roles:
    #- hostname
