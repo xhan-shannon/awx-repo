@@ -11,9 +11,9 @@
     - debug:
         var: cmd_result
 
-    - name: call roles
-      roles:
-        - motd
+- hosts: all
+  roles:
+    - motd
      #  hosts: servers
      # roles:
    #- hostname
