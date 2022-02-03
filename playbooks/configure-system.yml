@@ -1,15 +1,20 @@
 # Playbook to call multiple roles to configure systems
 - name: Configure systems
-  hosts: 10.23.143.113
+  hosts: all
   become: yes
 
   tasks:
-   - name: Call Roles
+    - name: Call Roles
+      find:
+        paths: /tmp
+      register: cmd_result
+    - debug:
+        var: cmd_result
 
-  hosts: servers
-  roles:
+     #  hosts: servers
+     # roles:
    #- hostname
    #- firewalld
    #- ntp-config
-   - motd
+   # - motd
 
